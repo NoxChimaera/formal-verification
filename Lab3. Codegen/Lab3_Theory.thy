@@ -1,4 +1,4 @@
-theory Lab2_Ex
+theory Lab3_Theory
 imports Main
 begin
 
@@ -33,6 +33,10 @@ primrec delall :: "'a \<Rightarrow> 'a list \<Rightarrow> 'a list"
   | "delall x (y#ys) = (if y = x then (delall x ys) else y#(delall x ys))"
 
 value "delall 0 [1, 1, 0, 0, 1] :: int list"
+
+export_code replace delall del1
+  in Haskell module_name App file "haskabelle"
+
 
 (* Вариант 3: 3 и 5
     3: theorem "del1 x (del1 y zs) = del1 y (del1 x zs)"
