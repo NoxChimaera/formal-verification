@@ -1,4 +1,4 @@
-
+@echo off
 ( echo :load App.hs
   echo ">>>>>>>>>>>>>START"
   echo "Theory: del1 x (del1 y zs) = del1 y (del1 x zs)"
